@@ -10,16 +10,22 @@
     </div>
 
     <div class="right-panel">
-        <h2>Create An Account</h2>
-        <p>Join the community with your PUP email to get started.</p>
+        <div class="form-header">
+            <h2>Create An Account</h2>
+            <p>Join the community with your PUP Email to get started.</p>
+        </div>
 
-        <input placeholder="Full Name" />
-        <input placeholder="PUP Webmail" />
-        <input placeholder="Password" type="password" />
+        <input type="text" placeholder="Full Name" />
+        <input type="email" placeholder="Email Address" />
+        <input type="password" placeholder="Password" />
+        <input type="password" placeholder="Confirm Password" />
 
-        <button class="btn-main">Create Account</button>
+        <button class="btn-main">Sign Up</button>
 
-        <p class="small">Already have an account? <a href="/Login">Login</a></p>
+        <p class="small">
+            Already have an account?
+            <a asp-page="/Index" class="link">Login</a>
+        </p>
     </div>
 
 </div>
