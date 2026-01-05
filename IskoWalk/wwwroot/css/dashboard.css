@@ -1,0 +1,69 @@
+﻿.dashboard {
+    display: flex;
+    height: 100vh;
+}
+
+.sidebar {
+    width: 240px;
+    background: #8b0000;
+    color: white;
+    padding: 25px;
+}
+
+    .sidebar h3 {
+        margin-bottom: 25px;
+    }
+
+    .sidebar a {
+        display: block;
+        padding: 12px;
+        border-radius: 10px;
+        margin-bottom: 10px;
+    }
+
+    .sidebar .active {
+        background: #a30000;
+    }
+
+.content {
+    flex: 1;
+    padding: 40px;
+}
+
+.topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cards {
+    display: flex;
+    gap: 25px;
+    margin-top: 25px;
+}
+
+.card {
+    width: 230px;
+    background: #f4f4f4;
+    border-radius: 12px;
+    padding: 15px;
+}
+
+    .card h4 {
+        margin-bottom: 8px;
+    }
+
+    .card p {
+        font-size: 14px;
+        margin: 4px 0;
+    }
+
+.actions {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+    .actions button {
+        padding: 6px 10px;
+    }

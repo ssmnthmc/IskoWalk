@@ -1,0 +1,50 @@
+﻿@page
+@model IskoWalk.Pages.DashboardModel
+<link rel="stylesheet" href="~/css/dashboard.css" />
+
+<div class="dashboard">
+
+    <aside class="sidebar">
+        <h3>ISKOWALK</h3>
+        <a class="active">Dashboard</a>
+        <a>My Requests</a>
+        <a>Profile</a>
+    </aside>
+
+    <main class="content">
+
+        <div class="topbar">
+            <h2>Welcome, Iskolar!</h2>
+            <button class="btn-main">New Request</button>
+        </div>
+
+        <h3>Available Walk Requests</h3>
+
+        <div class="cards">
+
+            <div class="card">
+                <h4>Maria Clara</h4>
+                <p>From: Main Building</p>
+                <p>To: Pureza LRT Station</p>
+                <p>Time: Dec 30, 10:29 PM</p>
+                <div class="actions">
+                    <button>View</button>
+                    <button class="btn-main">Accept</button>
+                </div>
+            </div>
+
+            <div class="card">
+                <h4>Jose Rizal</h4>
+                <p>From: Lagoon</p>
+                <p>To: Teresa St.</p>
+                <p>Time: Dec 31, 12:29 AM</p>
+                <div class="actions">
+                    <button>View</button>
+                    <button class="btn-main">Accept</button>
+                </div>
+            </div>
+
+        </div>
+
+    </main>
+</div>
