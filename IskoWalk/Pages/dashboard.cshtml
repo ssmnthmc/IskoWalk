@@ -13,16 +13,17 @@
         </div>
 
         <nav class="menu">
-            <a class="active"><i class="fa-solid fa-house"></i>Dashboard</a>
-
-            <a asp-page="/MyRequests">
-                <i class="fa-solid fa-file-lines"></i> My Requests
+            <a asp-page="/Dashboard" class="@(PageContext.ActionDescriptor.ViewEnginePath == "/dashboard" ? "active" : "")">
+                <i class="fa-solid fa-house"></i>Dashboard
             </a>
 
-            <a asp-page="/Profile">
-                <i class="fa-solid fa-user"></i> Profile
+            <a asp-page="/MyRequests" class="@(PageContext.ActionDescriptor.ViewEnginePath == "/myrequests" ? "active" : "")">
+                <i class="fa-solid fa-file-lines"></i>My Requests
             </a>
 
+            <a asp-page="/Profile" class="@(PageContext.ActionDescriptor.ViewEnginePath == "/profile" ? "active" : "")">
+                <i class="fa-solid fa-user"></i>Profile
+            </a>
         </nav>
 
         <div class="user-box" id="profileBtn">
@@ -50,7 +51,7 @@
 
         <div class="topbar">
             <h3>Dashboard</h3>
-            <button class="btn-main"><i class="fa-solid fa-plus"></i> New Request</button>
+            <a href="/Create" class="btn-main"><i class="fa-solid fa-plus"></i> New Request</a>
         </div>
 
         <div class="divider"></div>
@@ -72,7 +73,7 @@
                 <p class="empty-sub">
                     Why not be the first to create one? Your request will appear here for others to accept.
                 </p>
-                <button class="btn-main">Create a Request</button>
+                <a href="/Create" class="btn-main">Create a Request</a>
             </div>
 
             @*             

@@ -10,6 +10,8 @@ namespace IskoWalk.Pages
 
         public void OnGet()
         {
+            ViewData["ActivePage"] = "Dashboard";
+
             // TEMPORARY FAKE DATA — for UI preview only
             Requests = new List<WalkRequest>
         {

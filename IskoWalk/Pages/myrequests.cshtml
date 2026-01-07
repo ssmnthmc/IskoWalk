@@ -13,16 +13,17 @@
         </div>
 
         <nav class="menu">
-            <a asp-page="/Dashboard">><i class="fa-solid fa-house"></i>Dashboard</a>
-
-            <a class="active">
-                <i class="fa-solid fa-file-lines"></i> My Requests
+            <a asp-page="/Dashboard" class="@(PageContext.ActionDescriptor.ViewEnginePath == "/dashboard" ? "active" : "")">
+                <i class="fa-solid fa-house"></i>Dashboard
             </a>
 
-            <a asp-page="/Profile">
-                <i class="fa-solid fa-user"></i> Profile
+            <a asp-page="/MyRequests" class="@(PageContext.ActionDescriptor.ViewEnginePath == "/myrequests" ? "active" : "")">
+                <i class="fa-solid fa-file-lines"></i>My Requests
             </a>
 
+            <a asp-page="/Profile" class="@(PageContext.ActionDescriptor.ViewEnginePath == "/profile" ? "active" : "")">
+                <i class="fa-solid fa-user"></i>Profile
+            </a>
         </nav>
 
         <div class="user-box" id="profileBtn">
@@ -50,7 +51,7 @@
 
         <div class="topbar">
             <div class="directory">Dashboard › <b>My Requests</b></div>
-            <button class="btn-main"><i class="fa-solid fa-plus"></i> New Request</button>
+            <a href="/Create" class="btn-main"><i class="fa-solid fa-plus"></i> New Request</a>
         </div>
 
         <div class="divider"></div>
@@ -68,23 +69,21 @@
         <div class="empty-state">
             <p class="title">You have no active requests.</p>
             <p class="subtitle">Ready to go? Create a request to find a companion.</p>
-            <button class="btn-main">Create a Request</button>
+            <a href="/Create" class="btn-main">Create a Request</a>
         </div>
 
     </main>
 </div>
 
 <script>
-    const toggle = document.getElementById("profileToggle");
-    const menu = document.getElementById("profileMenu");
+    const btn = document.getElementById("profileBtn");
+    const menu = document.getElementById("dropdownMenu");
 
-    toggle.onclick = () => {
-        menu.classList.toggle("hidden");
-    };
+    btn.onclick = () => menu.classList.toggle("show");
 
     document.addEventListener("click", e => {
-        if (!toggle.contains(e.target) && !menu.contains(e.target)) {
-            menu.classList.add("hidden");
+        if(!btn.contains(e.target) && !menu.contains(e.target)){
+            menu.classList.remove("show");
         }
     });
 </script>

@@ -1,6 +1,4 @@
-﻿/* — exact styling from reference — */
-
-body {
+﻿body {
     background: #e3dfdf;
 }
 
@@ -42,10 +40,24 @@ body {
         border-radius: 8px;
         font-size: 14px;
         cursor: pointer;
+        color: white; 
+        text-decoration: none; 
     }
 
-    .menu .active {
-        background: #a30000;
+    .menu a:visited {
+        color: white; /* prevent blue on visited/active */    
+        text-decoration: none; /* prevent underline on hover/click */    
+    }    
+
+    .menu a:hover{
+        color: white; /* prevent blue on visited/active */    
+        text-decoration: none; /* prevent underline on hover/click */
+    }    
+
+    .menu a.active {
+        color: white; /* prevent blue on visited/active */    
+        text-decoration: none; /* prevent underline on hover/click */
+        background: #5c0000; /* darker than sidebar */
     }
 
 .user-box {
@@ -119,7 +131,23 @@ body {
     border-radius: 6px;
     border: none;
     font-size: 13px;
+    text-decoration: none;
 }
+
+    .btn-main:visited {
+        color: white;
+        text-decoration: none;
+    }
+
+    .btn-main:hover {
+        color: white;
+        text-decoration: none;
+    }
+
+    .btn-main:active {
+        color: white;
+        text-decoration: none;
+    }
 
 .divider {
     height: 1px;
