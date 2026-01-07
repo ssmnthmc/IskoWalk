@@ -14,8 +14,15 @@
 
         <nav class="menu">
             <a class="active"><i class="fa-solid fa-house"></i>Dashboard</a>
-            <a><i class="fa-solid fa-file-lines"></i>My Requests</a>
-            <a><i class="fa-solid fa-user"></i>Profile</a>
+
+            <a asp-page="/MyRequests">
+                <i class="fa-solid fa-file-lines"></i> My Requests
+            </a>
+
+            <a asp-page="/Profile">
+                <i class="fa-solid fa-user"></i> Profile
+            </a>
+
         </nav>
 
         <div class="user-box" id="profileBtn">

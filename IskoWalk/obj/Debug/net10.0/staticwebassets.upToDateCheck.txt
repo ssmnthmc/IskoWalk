@@ -1,5 +1,6 @@
 wwwroot\css\dashboard.css
 wwwroot\css\login.css
+wwwroot\css\myrequests.css
 wwwroot\css\site.css
 wwwroot\favicon.ico
 wwwroot\images\IskoWalk.png
@@ -66,6 +67,7 @@ wwwroot\lib\jquery\dist\jquery.slim.min.map
 wwwroot\lib\jquery\LICENSE.txt
 C:\Users\admin\source\repos\IskoWalk\IskoWalk\wwwroot\css\dashboard.css
 C:\Users\admin\source\repos\IskoWalk\IskoWalk\wwwroot\css\login.css
+C:\Users\admin\source\repos\IskoWalk\IskoWalk\wwwroot\css\myrequests.css
 C:\Users\admin\source\repos\IskoWalk\IskoWalk\wwwroot\css\site.css
 C:\Users\admin\source\repos\IskoWalk\IskoWalk\wwwroot\favicon.ico
 C:\Users\admin\source\repos\IskoWalk\IskoWalk\wwwroot\js\site.js

@@ -99,3 +99,4 @@ C:\Users\admin\source\repos\IskoWalk\IskoWalk\obj\Debug\net10.0\IskoWalk.pdb
 C:\Users\admin\source\repos\IskoWalk\IskoWalk\obj\Debug\net10.0\IskoWalk.genruntimeconfig.cache
 C:\Users\admin\source\repos\IskoWalk\IskoWalk\obj\Debug\net10.0\ref\IskoWalk.dll
 C:\Users\admin\source\repos\IskoWalk\IskoWalk\obj\Debug\net10.0\compressed\r85rrhfdvn-{0}-knxiuq9084-knxiuq9084.gz
+C:\Users\admin\source\repos\IskoWalk\IskoWalk\obj\Debug\net10.0\compressed\o2hn17qotm-{0}-1vuqsepz7a-1vuqsepz7a.gz

@@ -1,0 +1,37 @@
+﻿@import url('dashboard.css');
+
+.tabs {
+    margin-top: 20px;
+    display: flex;
+    gap: 12px;
+}
+
+.tab {
+    padding: 8px 18px;
+    border-radius: 8px;
+    border: none;
+    background: #e0e0e0;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+    .tab.active {
+        background: white;
+        border: 1px solid #ccc;
+    }
+
+.empty-state {
+    margin-top: 40px;
+    background: #f2f2f2;
+    padding: 60px;
+    border-radius: 12px;
+    text-align: center;
+}
+
+    .empty-state .title {
+        font-weight: 600;
+    }
+
+    .empty-state .btn-main {
+        margin-top: 15px;
+    }

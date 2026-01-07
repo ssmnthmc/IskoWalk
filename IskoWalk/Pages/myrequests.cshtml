@@ -1,0 +1,90 @@
+﻿@page
+@model IskoWalk.Pages.MyRequestsModel
+<link rel="stylesheet" href="~/css/myrequests.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+<div class="dashboard">
+
+    <aside class="sidebar">
+
+        <div class="brand">
+            <img src="~/images/IskoWalk.png" />
+            <span>ISKOWALK</span>
+        </div>
+
+        <nav class="menu">
+            <a asp-page="/Dashboard">><i class="fa-solid fa-house"></i>Dashboard</a>
+
+            <a class="active">
+                <i class="fa-solid fa-file-lines"></i> My Requests
+            </a>
+
+            <a asp-page="/Profile">
+                <i class="fa-solid fa-user"></i> Profile
+            </a>
+
+        </nav>
+
+        <div class="user-box" id="profileBtn">
+            <img src="~/images/IskoWalk.png" />
+            <div class="user-info">
+                <strong>juan.dc</strong>
+                <span>Student</span>
+            </div>
+            <i class="fa-solid fa-chevron-down"></i>
+        </div>
+
+        <div class="dropdown" id="dropdownMenu">
+            <div class="dropdown-user">
+                <strong>juan.dc</strong>
+                <small>juan.dc@iskolarngbayan.pup.edu.ph</small>
+            </div>
+            <hr />
+            <a><i class="fa-solid fa-gear"></i> Setting</a>
+            <a><i class="fa-solid fa-right-from-bracket"></i> Log out</a>
+        </div>
+
+    </aside>
+
+    <main class="content">
+
+        <div class="topbar">
+            <div class="directory">Dashboard › <b>My Requests</b></div>
+            <button class="btn-main"><i class="fa-solid fa-plus"></i> New Request</button>
+        </div>
+
+        <div class="divider"></div>
+
+        <h2>My Activity</h2>
+        <p class="subtitle">Track your active walk requests and view your complete activity history.</p>
+
+        <div class="tabs">
+            <button class="tab active">Active Request</button>
+            <button class="tab">Accepted Walks</button>
+            <button class="tab">History</button>
+        </div>
+
+
+        <div class="empty-state">
+            <p class="title">You have no active requests.</p>
+            <p class="subtitle">Ready to go? Create a request to find a companion.</p>
+            <button class="btn-main">Create a Request</button>
+        </div>
+
+    </main>
+</div>
+
+<script>
+    const toggle = document.getElementById("profileToggle");
+    const menu = document.getElementById("profileMenu");
+
+    toggle.onclick = () => {
+        menu.classList.toggle("hidden");
+    };
+
+    document.addEventListener("click", e => {
+        if (!toggle.contains(e.target) && !menu.contains(e.target)) {
+            menu.classList.add("hidden");
+        }
+    });
+</script>
