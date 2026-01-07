@@ -1,6 +1,6 @@
 ﻿@page
-@model IskoWalk.Pages.MyRequestsModel
-<link rel="stylesheet" href="~/css/myrequests.css" />
+@model IskoWalk.Pages.ProfileModel
+<link rel="stylesheet" href="~/css/profile.css" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 
 <div class="dashboard">
@@ -48,30 +48,39 @@
     </aside>
 
     <main class="content">
-
         <div class="topbar">
-            <div class="directory">Dashboard › <b>My Requests</b></div>
-            <a asp-page="/Create" class="btn-main"><i class="fa-solid fa-plus"></i> New Request</a>
+            <div class="directory">Dashboard › <b>Profile</b></div>
+            <a href="/Create" class="btn-main"><i class="fa-solid fa-plus"></i> New Request</a>
         </div>
 
         <div class="divider"></div>
 
-        <h2>My Activity</h2>
-        <p class="subtitle">Track your active walk requests and view your complete activity history.</p>
+        <section class="profile-card">
+            <div class="card-header">
+                <h1>My Profile</h1>
+                <p>Your personal information on IskoWalk</p>
+            </div>
+            <div class="profile-details">
+                <img src="~/images/IskoWalk.png" class="profile-avatar" alt="Profile Picture" />
 
-        <div class="tabs">
-            <button class="tab active">Active Request</button>
-            <button class="tab">Accepted Walks</button>
-            <button class="tab">History</button>
-        </div>
+                <div class="profile-text">
+                    <h2>juan.dc</h2>
+                    <p class="email">juan.dc@iskolarngbayan.pup.edu.ph</p>
+                    <p class="role">Student</p>
+                </div>
+            </div>
+        </section>
 
-
-        <div class="empty-state">
-            <p class="title">You have no active requests.</p>
-            <p class="subtitle">Ready to go? Create a request to find a companion.</p>
-            <a asp-page="/Create" class="btn-main">Create a Request</a>
-        </div>
-
+        <section class="profile-card">
+            <div class="card-header">
+                <h2>Settings</h2>
+                <p>Manage your account settings.</p>
+            </div>
+            <div class="settings-content">
+                <button class="btn-delete">Delete Account</button>
+                <p class="warning-text">This action is irreversible.</p>
+            </div>
+        </section>
     </main>
 </div>
 

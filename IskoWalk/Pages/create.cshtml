@@ -13,16 +13,17 @@
         </div>
 
         <nav class="menu">
-            <a asp-page="/Dashboard"><i class="fa-solid fa-house"></i>Dashboard</a>
-
-            <a asp-page="/MyRequests">
-                <i class="fa-solid fa-file-lines"></i> My Requests
+            <a asp-page="/Dashboard" class="@(PageContext.ActionDescriptor.ViewEnginePath == "/dashboard" ? "active" : "")">
+                <i class="fa-solid fa-house"></i>Dashboard
             </a>
 
-            <a asp-page="/Profile">
-                <i class="fa-solid fa-user"></i> Profile
+            <a asp-page="/MyRequests" class="@(PageContext.ActionDescriptor.ViewEnginePath == "/myrequests" ? "active" : "")">
+                <i class="fa-solid fa-file-lines"></i>My Requests
             </a>
 
+            <a asp-page="/Profile" class="@(PageContext.ActionDescriptor.ViewEnginePath == "/profile" ? "active" : "")">
+                <i class="fa-solid fa-user"></i>Profile
+            </a>
         </nav>
 
         <div class="user-box" id="profileBtn">
@@ -65,10 +66,22 @@
             <form class="create-form" onsubmit="submitRequest(event)">
 
                 <div class="create-row">
-                    <div>
-                        <label>From (PUP Location)</label>
-                        <select>
-                            <option>Select a starting point</option>
+                    <div class="form-group">
+                        <label for="fromLocation">From (PUP Location)</label>
+                        <select class="form-control">
+                            <option disabled selected>Select a starting point<i class="fa-solid fa-chevron-down select-icon"></i></option>
+                            <option>Charlie del Rosario</option>
+                            <option>Dome</option>
+                            <option>East Wing</option>
+                            <option>GrandStand</option>
+                            <option>Gymnasium</option>
+                            <option>Interfaith Chapel</option>
+                            <option>Lagoon</option>
+                            <option>Main Building</option>
+                            <option>Main Gate</option>
+                            <option>Ninoy Aquino Library</option>
+                            <option>North Wing</option>
+                            <option>Obelisk</option>
                         </select>
                     </div>
 
