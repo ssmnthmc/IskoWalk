@@ -50,16 +50,14 @@
     <main class="content">
 
         <div class="topbar">
-            <h3>Dashboard</h3>
+            <div class="directory"><b>Dashboard</b></div>
             <a asp-page="/Create" class="btn-main"><i class="fa-solid fa-plus"></i> New Request</a>
         </div>
 
         <div class="divider"></div>
 
-        <section class="welcome">
-            <h2>Welcome, Iskolar!</h2>
-            <p>Find a walking companion and help keep the community safe.</p>
-        </section>
+        <h2>Welcome, Iskolar!</h2>
+        <p class="subtitle">Find a walking companion and help keep the community safe.</p>
 
         <section class="requests">
 
@@ -69,10 +67,8 @@
             </div>
 
             <div class="empty-state">
-                <p class="empty-title">No available requests right now.</p>
-                <p class="empty-sub">
-                    Why not be the first to create one? Your request will appear here for others to accept.
-                </p>
+                <p class="title">No available requests right now.</p>
+                <p class="subtitle">Why not be the first to create one? Your request will appear here for others to accept.</p>
                 <a asp-page="/Create" class="btn-main">Create a Request</a>
             </div>
 

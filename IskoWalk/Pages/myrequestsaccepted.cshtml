@@ -51,22 +51,18 @@
 
         <div class="topbar">
             <div class="directory">Dashboard › My Requests › <b>Accepted Request</b></div>
-            <a asp-page="/Create" class="btn-main">
-                <i class="fa-solid fa-plus"></i> New Request
-            </a>
+            <a asp-page="/Create" class="btn-main"><i class="fa-solid fa-plus"></i> New Request</a>
         </div>
 
         <div class="divider"></div>
 
         <h2>My Activity</h2>
-        <p class="subtitle">
-            Track the requests you've created, the walks you've accepted, and view your activity history.
-        </p>
+        <p class="subtitle">Track the requests you've created, the walks you've accepted, and view your activity history.</p>
 
         <div class="tabs">
             <a asp-page="/MyRequestsActive" class="tab">Active Request</a>
             <button class="tab active">Accepted Request</button>
-            <button class="tab">History</button>
+            <a asp-page="/MyRequestsHistory" class="tab">History</a>
         </div>
 
         <div class="empty-state">

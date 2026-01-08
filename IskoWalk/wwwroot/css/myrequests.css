@@ -1,23 +1,32 @@
 ﻿@import url('dashboard.css');
 
 .tabs {
-    margin-top: 20px;
     display: flex;
-    gap: 12px;
+    gap: 14px;
+    margin: 25px 0 10px;
 }
 
 .tab {
     padding: 8px 18px;
-    border-radius: 8px;
-    border: none;
-    background: #e0e0e0;
-    font-size: 14px;
+    border-radius: 20px;
+    border: 1px solid #ccc;
+    background: white;
+    font-size: 13px;
+    font-weight: 500;
+    color: #333;
     cursor: pointer;
+    transition: .15s;
+    text-decoration: none;
 }
 
+    .tab:hover {
+        background: #f3f3f3;
+    }
+
     .tab.active {
-        background: white;
-        border: 1px solid #ccc;
+        background: #8b0000;
+        border-color: #8b0000;
+        color: white;
     }
 
 .empty-state {
@@ -35,3 +44,56 @@
     .empty-state .btn-main {
         margin-top: 15px;
     }
+
+.history-box {
+    margin-top: 25px;
+    border: 1px solid #dcdcdc;
+    border-radius: 10px;
+    overflow: hidden;
+    background: white;
+}
+
+.history-header,
+.history-row {
+    display: grid;
+    grid-template-columns: 2fr 1.3fr 1fr 1fr;
+    padding: 12px 16px;
+    font-size: 13px;
+}
+
+.history-header {
+    background: #f5f5f5;
+    font-weight: 600;
+    color: #555;
+}
+
+.history-row {
+    border-top: 1px solid #eee;
+}
+
+.role-badge {
+    background: #e6e6e6;
+    padding: 2px 8px;
+    border-radius: 6px;
+    font-size: 11px;
+    display: inline-block;
+}
+
+.status {
+    padding: 3px 10px;
+    border-radius: 8px;
+    font-size: 11px;
+    font-weight: 600;
+    display: inline-block;
+}
+
+    .status.completed {
+        background: #dff3e3;
+        color: #1e7a34;
+    }
+
+    .status.failed {
+        background: #fbe1e1;
+        color: #b62323;
+    }
+

@@ -1,5 +1,5 @@
 ﻿@page
-@model IskoWalk.Pages.MyRequestsActiveModel
+@model IskoWalk.Pages.MyRequestsHistoryModel
 <link rel="stylesheet" href="~/css/myrequests.css" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 
@@ -17,7 +17,7 @@
                 <i class="fa-solid fa-house"></i>Dashboard
             </a>
 
-            <a asp-page="/MyRequestsActive" class="@(PageContext.ActionDescriptor.ViewEnginePath == "/myrequestsactive" ? "active" : "")">
+            <a asp-page="/MyRequestsHistory" class="@(PageContext.ActionDescriptor.ViewEnginePath == "/myrequestshistory" ? "active" : "")">
                 <i class="fa-solid fa-file-lines"></i>My Requests
             </a>
 
@@ -50,7 +50,7 @@
     <main class="content">
 
         <div class="topbar">
-            <div class="directory">Dashboard › My Requests › <b>Active Request</b></div>
+            <div class="directory">Dashboard › My Requests › <b>History</b></div>
             <a asp-page="/Create" class="btn-main"><i class="fa-solid fa-plus"></i> New Request</a>
         </div>
 
@@ -60,16 +60,49 @@
         <p class="subtitle">Track the requests you've created, the walks you've accepted, and view your activity history.</p>
 
         <div class="tabs">
-            <button class="tab active">Active Request</button>
-            <a asp-page="/MyRequestsAccepted" class="tab">Accepted Request</a>
-            <a asp-page="/MyRequestsHistory" class="tab">History</a>
+            <a asp-page="/MyRequestsActive" class="tab">Active Request</a>
+            <a asp-page="/MyRequestsAccepted" class="tab">Accepted Walks</a>
+            <button class="tab active">History</button>
         </div>
 
         <div class="empty-state">
-            <p class="title">You have no active requests.</p>
-            <p class="subtitle">Ready to go? Create a request to find a companion.</p>
-            <a asp-page="/Create" class="btn-main">Create a Request</a>
+            <p class="title">No history yet.</p>
+            <p class="subtitle">Once your walks are completed, they will appear here.</p>
         </div>
+
+        @* // PLACEHOLDER DATA (backend remove/edit later) 
+        <div class="history-box">
+
+            <div class="history-header">
+                <div>Route</div>
+                <div>Date</div>
+                <div>Your Role</div>
+                <div>Outcome</div>
+            </div>
+
+            <div class="history-row">
+                <div>Dome Teresa → 7-Eleven</div>
+                <div>Jan 5, 2026 8:00 PM</div>
+                <div><span class="role-badge">Requester</span></div>
+                <div><span class="status completed">Completed</span></div>
+            </div>
+
+            <div class="history-row">
+                <div>Dome Teresa → 7-Eleven</div>
+                <div>Jan 5, 2026 8:00 PM</div>
+                <div><span class="role-badge">Requester</span></div>
+                <div><span class="status completed">Completed</span></div>
+            </div>
+
+            <div class="history-row">
+                <div>Dome Teresa → 7-Eleven</div>
+                <div>Jan 5, 2026 8:00 PM</div>
+                <div><span class="role-badge">Companion</span></div>
+                <div><span class="status failed">Completed</span></div>
+            </div>
+
+        </div>
+        *@
 
     </main>
 </div>
