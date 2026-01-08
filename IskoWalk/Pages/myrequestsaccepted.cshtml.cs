@@ -3,11 +3,11 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace IskoWalk.Pages
 {
-    public class MyRequestsModel : PageModel
+    public class MyRequestsAcceptedModel : PageModel
     {
         public void OnGet()
         {
-            ViewData["ActivePage"] = "MyRequests";
+            ViewData["ActivePage"] = "MyRequestsAccepted";
         }
     }
 }

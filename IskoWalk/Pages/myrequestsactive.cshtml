@@ -1,6 +1,6 @@
 ﻿@page
-@model IskoWalk.Pages.DashboardModel
-<link rel="stylesheet" href="~/css/dashboard.css" />
+@model IskoWalk.Pages.MyRequestsActiveModel
+<link rel="stylesheet" href="~/css/myrequests.css" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 
 <div class="dashboard">
@@ -50,60 +50,27 @@
     <main class="content">
 
         <div class="topbar">
-            <h3>Dashboard</h3>
+            <div class="directory">Dashboard › My Requests › <b>Active Request</b></div>
             <a asp-page="/Create" class="btn-main"><i class="fa-solid fa-plus"></i> New Request</a>
         </div>
 
         <div class="divider"></div>
 
-        <section class="welcome">
-            <h2>Welcome, Iskolar!</h2>
-            <p>Find a walking companion and help keep the community safe.</p>
-        </section>
+        <h2>My Activity</h2>
+        <p class="subtitle">Track the requests you've created, the walks you've accepted, and view your activity history.</p>
 
-        <section class="requests">
+        <div class="tabs">
+            <button class="tab active">Active Request</button>
+            <a asp-page="/MyRequestsAccepted" class="tab">Accepted Request</a>
+            <button class="tab">History</button>
+        </div>
 
-            <div class="requests-header">
-                <h4>Available Walk Requests</h4>
-                <button class="refresh"><i class="fa-solid fa-rotate"></i> Refresh</button>
-            </div>
 
-            <div class="empty-state">
-                <p class="empty-title">No available requests right now.</p>
-                <p class="empty-sub">
-                    Why not be the first to create one? Your request will appear here for others to accept.
-                </p>
-                <a asp-page="/Create" class="btn-main">Create a Request</a>
-            </div>
-
-            @*             
-                <div class="cards">
-                    @foreach(var req in Model.Requests){
-                        <div class="card">
-                            <div class="card-head">
-                                <div class="avatar"></div>
-                                <div>
-                                    <strong>@req.Name</strong>
-                                    <span>Requester</span>
-                                </div>
-                            </div>
-
-                            <div class="card-info">
-                                <p><i class="fa-solid fa-location-dot"></i> From <span>@req.From</span></p>
-                                <p><i class="fa-solid fa-flag"></i> To <span>@req.To</span></p>
-                                <p><i class="fa-solid fa-clock"></i> Time <span>@req.Time</span></p>
-                            </div>
-
-                            <div class="card-actions">
-                                <button class="view">View Details</button>
-                                <button class="accept"><i class="fa-solid fa-check"></i> Accept</button>
-                            </div>
-                        </div>
-                    }
-                </div>
-            *@
-
-        </section>
+        <div class="empty-state">
+            <p class="title">You have no active requests.</p>
+            <p class="subtitle">Ready to go? Create a request to find a companion.</p>
+            <a asp-page="/Create" class="btn-main">Create a Request</a>
+        </div>
 
     </main>
 </div>

@@ -1,5 +1,5 @@
 ﻿@page
-@model IskoWalk.Pages.MyRequestsModel
+@model IskoWalk.Pages.MyRequestsAcceptedModel
 <link rel="stylesheet" href="~/css/myrequests.css" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 
@@ -17,7 +17,7 @@
                 <i class="fa-solid fa-house"></i>Dashboard
             </a>
 
-            <a asp-page="/MyRequests" class="@(PageContext.ActionDescriptor.ViewEnginePath == "/myrequests" ? "active" : "")">
+            <a asp-page="/MyRequestsAccepted" class="@(PageContext.ActionDescriptor.ViewEnginePath == "/myrequestsaccepted" ? "active" : "")">
                 <i class="fa-solid fa-file-lines"></i>My Requests
             </a>
 
@@ -50,26 +50,29 @@
     <main class="content">
 
         <div class="topbar">
-            <div class="directory">Dashboard › <b>My Requests</b></div>
-            <a asp-page="/Create" class="btn-main"><i class="fa-solid fa-plus"></i> New Request</a>
+            <div class="directory">Dashboard › My Requests › <b>Accepted Request</b></div>
+            <a asp-page="/Create" class="btn-main">
+                <i class="fa-solid fa-plus"></i> New Request
+            </a>
         </div>
 
         <div class="divider"></div>
 
         <h2>My Activity</h2>
-        <p class="subtitle">Track your active walk requests and view your complete activity history.</p>
+        <p class="subtitle">
+            Track the requests you've created, the walks you've accepted, and view your activity history.
+        </p>
 
         <div class="tabs">
-            <button class="tab active">Active Request</button>
-            <button class="tab">Accepted Walks</button>
+            <a asp-page="/MyRequestsActive" class="tab">Active Request</a>
+            <button class="tab active">Accepted Request</button>
             <button class="tab">History</button>
         </div>
 
-
         <div class="empty-state">
-            <p class="title">You have no active requests.</p>
-            <p class="subtitle">Ready to go? Create a request to find a companion.</p>
-            <a asp-page="/Create" class="btn-main">Create a Request</a>
+            <p class="title">You have no accepted walks.</p>
+            <p class="subtitle">Accept a request from the dashboard to help a fellow Isko.</p>
+            <a asp-page="/Dashboard" class="btn-main">View Available Requests</a>
         </div>
 
     </main>
