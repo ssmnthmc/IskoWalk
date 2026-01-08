@@ -44,6 +44,98 @@
     .empty-state .btn-main {
         margin-top: 15px;
     }
+    
+.request-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 260px);
+    gap: 16px;
+    margin-top: 25px;
+}
+
+/* Card */
+.request-card {
+    background: #f3f3f3;
+    border-radius: 10px;
+    padding: 14px;
+    font-size: 12px;
+}
+
+/* Header */
+.card-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+    .card-header .avatar {
+        width: 34px;
+        height: 34px;
+        border-radius: 50%;
+        background: #ddd;
+    }
+
+    .card-header .small {
+        font-size: 11px;
+        color: #666;
+    }
+
+/* Info section */
+.card-info p {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin: 4px 0;
+    color: #444;
+}
+
+/* Action area */
+.card-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 12px;
+}
+
+    .card-actions .view {
+        background: white;
+        border: 1px solid #ccc;
+        padding: 5px 10px;
+        border-radius: 6px;
+        font-size: 11px;
+    }
+
+/* Status */
+.status {
+    font-size: 10px;
+    padding: 4px 8px;
+    border-radius: 6px;
+    font-weight: 600;
+}
+
+    .status.pending {
+        background: #fff3cd;
+        color: #856404;
+    }
+
+    .status.accepted {
+        background: #d4edda;
+        color: #155724;
+    }
+
+/* Companion section */
+.companion-box {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 12px;
+}
+
+    .companion-box .avatar.small {
+        width: 26px;
+        height: 26px;
+    }
+
 
 .history-box {
     margin-top: 25px;
