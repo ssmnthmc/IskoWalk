@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("IskoWalk")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9dcf342cd5d0d4f88f9a19c39712b5096b074f0e")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+168ccad6026d7555c92d7f9d4be89428f14d373e")]
 [assembly: System.Reflection.AssemblyProductAttribute("IskoWalk")]
 [assembly: System.Reflection.AssemblyTitleAttribute("IskoWalk")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
