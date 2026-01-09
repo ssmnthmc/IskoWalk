@@ -65,15 +65,14 @@
             <a asp-page="/MyRequestsHistory" class="tab">History</a>
         </div>
 
-        <div class="empty-state">
+        @* <div class="empty-state">
             <p class="title">You have no accepted walks.</p>
             <p class="subtitle">Accept a request from the dashboard to help a fellow Isko.</p>
             <a asp-page="/Dashboard" class="btn-main">View Available Requests</a>
-        </div>
+        </div> *@
 
-        @* // PLACEHOLDER DATA (backend remove/edit later) 
+        // PLACEHOLDER DATA (backend remove/edit later)
         <div class="request-grid">
-
             <div class="request-card">
                 <div class="card-header">
                     <div class="avatar"></div>
@@ -90,37 +89,111 @@
                 </div>
 
                 <div class="card-actions">
-                    <button class="view">View Details</button>
-                    <span class="status pending">Awaiting Companion</span>
+                    <button class="view" onclick="openDetails(false)">View Details</button>
                 </div>
             </div>
+        </div>
 
-            <div class="request-card">
-                <div class="card-header">
-                    <div class="avatar"></div>
+        <div id="detailsModal" class="modal-overlay">
+            <div class="modal-content">
+                <div class="modal-header">
                     <div>
-                        <strong>Juan Dela Cruz</strong>
-                        <div class="small">Requester</div>
+                        <h2>Walk Request Details</h2>
+                        <p>Requested on December 31, 2025</p>
                     </div>
                 </div>
 
-                <div class="card-info">
-                    <p><i class="fa-solid fa-location-dot"></i> From <b>Main Building</b></p>
-                    <p><i class="fa-solid fa-flag"></i> To <b>Pureza LRT Station</b></p>
-                    <p><i class="fa-regular fa-clock"></i> Dec 30, 10:20 PM</p>
+                <div class="modal-body">
+                    <div class="modal-row user-row">
+                        <div class="user-info-block">
+                            <i class="fa-solid fa-user-tag icon-circle"></i>
+                            <div class="avatar-circle"></div>
+                            <div>
+                                <strong>Juan Dela Cruz</strong>
+                                <span>Requester</span>
+                            </div>
+                        </div>
+                        <div id="companionInfo" class="user-info-block hidden">
+                            <i class="fa-solid fa-handshake icon-circle"></i>
+                            <div class="avatar-circle"></div>
+                            <div>
+                                <strong>Jose Rizal</strong>
+                                <span>Companion</span>
+                                <small><i class="fa-solid fa-phone"></i> 09999992737</small>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="modal-row">
+                        <i class="fa-solid fa-location-dot icon-circle"></i>
+                        <div>
+                            <strong>Route</strong>
+                            <p>From: <b>Main Building (Lobby near the stairs)</b></p>
+                            <p>To: <b>Pureza LRT Station</b></p>
+                        </div>
+                    </div>
+
+                    <div class="modal-row grid-2">
+                        <div class="info-group">
+                            <i class="fa-regular fa-clock icon-circle"></i>
+                            <div>
+                                <strong>Date & Time</strong>
+                                <p>Wednesday, December 31 at 10:29PM</p>
+                            </div>
+                        </div>
+                        <div class="info-group">
+                            <i class="fa-solid fa-shirt icon-circle"></i>
+                            <div>
+                                <strong>Attire Description</strong>
+                                <p>Wearing a white shirt and basta kapag maganda, me nayan</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="modal-row">
+                        <i class="fa-solid fa-pen icon-circle"></i>
+                        <div>
+                            <strong>Additional Notes</strong>
+                            <p>Late ako konti hehe. Ayoko ko naghihintay</p>
+                        </div>
+                    </div>
                 </div>
 
-                <div class="companion-box">
-                    <div class="avatar small"></div>
-                    <div>
-                        <strong>Maria Santos</strong>
-                        <div class="small">Companion</div>
-                    </div>
-                    <span class="status accepted">Accepted</span>
+                <div class="modal-footer">
+                    <button class="btn-secondary" onclick="closeModal('detailsModal')">Close</button>
+                    <button id="markCompleteBtn" class="btn-complete hidden"><i class="fa-solid fa-check"></i>Mark as Completed</button>
                 </div>
             </div>
-        </div> *@
+        </div>
 
+        <div id="cancelModal" class="modal-overlay">
+            <div class="modal-content small-modal">
+                <button class="close-modal" onclick="closeModal('cancelModal')">&times;</button>
+                <h3 class="modal-title">Cancel Your Walk Request</h3>
+                <p class="modal-subtitle">Are you sure you want to cancel? Please provide a reason.</p>
+
+                <div class="reason-list">
+                    <label class="radio-item"><input type="radio" name="reason" checked> Change of plans</label>
+                    <label class="radio-item"><input type="radio" name="reason"> No longer needed</label>
+                    <label class="radio-item"><input type="radio" name="reason"> Found alternative companion</label>
+                    <label class="radio-item"><input type="radio" name="reason"> Safety concern</label>
+                    <label class="radio-item"><input type="radio" name="reason"> Others</label>
+                </div>
+
+                <div class="heads-up">
+                    <i class="fa-solid fa-triangle-exclamation"></i>
+                    <div>
+                        <strong>Heads Up!</strong>
+                        <p>Cancelling will prevent you from creating or accepting new requests for 1 hour.</p>
+                    </div>
+                </div>
+
+                <div class="modal-footer">
+                    <button class="btn-secondary" onclick="closeModal('cancelModal')">Nevermind</button>
+                    <button class="btn-cancel" onclick="confirmCancellation()">Confirm Cancellation</button>
+                </div>
+            </div>
+        </div>
     </main>
 </div>
 
@@ -135,4 +208,35 @@
             menu.classList.remove("show");
         }
     });
+
+    function openDetails(isAccepted) {
+        const modal = document.getElementById('detailsModal');
+        const companionSection = document.getElementById('companionInfo');
+        const completeBtn = document.getElementById('markCompleteBtn');
+
+        if (isAccepted) {
+            companionSection.classList.remove('hidden');
+            completeBtn.classList.remove('hidden');
+        } else {
+            companionSection.classList.add('hidden');
+            completeBtn.classList.add('hidden');
+        }
+
+        modal.style.display = 'flex';
+    }
+
+    function openCancelModal() {
+        document.getElementById('detailsModal').style.display = 'none';
+        document.getElementById('cancelModal').style.display = 'flex';
+    }
+
+    function closeModal(modalId) {
+        document.getElementById(modalId).style.display = 'none';
+    }
+
+    function confirmCancellation() {
+        alert("Request Cancelled. Note: You are now restricted for 1 hour.");
+        closeModal('cancelModal');
+        location.reload();
+    }
 </script>

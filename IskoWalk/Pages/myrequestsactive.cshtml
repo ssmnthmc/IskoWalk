@@ -41,7 +41,6 @@
                 <small>juan.dc@iskolarngbayan.pup.edu.ph</small>
             </div>
             <hr />
-            <a><i class="fa-solid fa-gear"></i> Setting</a>
             <a><i class="fa-solid fa-right-from-bracket"></i> Log out</a>
         </div>
 
@@ -127,9 +126,12 @@
 
         <div id="detailsModal" class="modal-overlay">
             <div class="modal-content">
-                <button class="close-modal" onclick="closeModal('detailsModal')">&times;</button>
-                <h2 class="modal-title">Walk Request Details</h2>
-                <p class="modal-subtitle">Requested on December 31, 2025</p>
+                <div class="modal-header">
+                    <div>
+                        <h2>Walk Request Details</h2>
+                        <p>Requested on December 31, 2025</p>
+                    </div>
+                </div>
 
                 <div class="modal-body">
                     <div class="modal-row user-row">
@@ -189,8 +191,8 @@
 
                 <div class="modal-footer">
                     <button class="btn-secondary" onclick="closeModal('detailsModal')">Close</button>
-                    <button id="markCompleteBtn" class="btn-complete hidden">Mark as Completed</button>
-                    <button class="btn-cancel" onclick="openCancelModal()">Cancel Request</button>
+                    <button id="markCompleteBtn" class="btn-complete hidden"><i class="fa-solid fa-check"></i>Mark as Completed</button>
+                    <button class="btn-cancel" onclick="openCancelModal()"><i class="fa-solid fa-xmark"></i>Cancel Request</button>
                 </div>
             </div>
         </div>
@@ -223,7 +225,6 @@
                 </div>
             </div>
         </div>
-
     </main>
 </div>
 

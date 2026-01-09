@@ -78,7 +78,7 @@
     .card-header .avatar {
         width: 40px;
         height: 40px;
-        background: #ccc;
+        background: #d9d9d9;
         border-radius: 50%;
     }
 
@@ -187,9 +187,9 @@
 
 .modal-content {
     background: white;
-    width: 600px;
+    width: 650px;
     border-radius: 12px;
-    padding: 30px;
+    padding: 24px 26px 22px;
     position: relative;
     box-shadow: 0 10px 30px rgba(0,0,0,0.2);
 }
@@ -201,21 +201,21 @@
 .icon-circle {
     background: #f8eeee;
     color: #8b0000;
-    width: 35px;
-    height: 35px;
+    width: 36px;
+    height: 36px;
     border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 14px;
+    display: grid;
+    place-items: center;
+    font-size: 15px;
+    line-height: 1;
 }
 
 .modal-row {
     display: flex;
-    gap: 15px;
-    margin-bottom: 25px;
+    gap: 12px;
+    margin-bottom: 18px;
     border-bottom: 1px solid #eee;
-    padding-bottom: 15px;
+    padding-bottom: 14px;
 }
 
 .grid-2 {
