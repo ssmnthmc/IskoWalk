@@ -101,4 +101,4 @@ C:\Users\admin\source\repos\IskoWalk\IskoWalk\obj\Debug\net10.0\ref\IskoWalk.dll
 C:\Users\admin\source\repos\IskoWalk\IskoWalk\obj\Debug\net10.0\compressed\619uhxw9qv-{0}-0otqmrsne3-0otqmrsne3.gz
 C:\Users\admin\source\repos\IskoWalk\IskoWalk\obj\Debug\net10.0\compressed\tu1mkwleuw-{0}-tus2s3c73p-tus2s3c73p.gz
 C:\Users\admin\source\repos\IskoWalk\IskoWalk\obj\Debug\net10.0\compressed\r85rrhfdvn-{0}-70rczktykm-70rczktykm.gz
-C:\Users\admin\source\repos\IskoWalk\IskoWalk\obj\Debug\net10.0\compressed\o2hn17qotm-{0}-7lmw044qzr-7lmw044qzr.gz
+C:\Users\admin\source\repos\IskoWalk\IskoWalk\obj\Debug\net10.0\compressed\o2hn17qotm-{0}-fodirjiqgh-fodirjiqgh.gz
