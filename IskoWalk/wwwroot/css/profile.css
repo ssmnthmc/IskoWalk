@@ -1,6 +1,5 @@
 ﻿@import url("dashboard.css");
 
-/* Profile Card Layout */
 .profile-card {
     background: white;
     border: 1px solid #ddd;
@@ -20,7 +19,6 @@
     margin-bottom: 20px;
 }
 
-/* Avatar and Info */
 .profile-details {
     display: flex;
     align-items: center;
@@ -30,10 +28,10 @@
 .profile-avatar {
     width: 80px;
     height: 80px;
-    border-radius: 50%; /* Keeps it a perfect circle */
-    background: #e0e0e0; /* Fallback color while image loads */
-    object-fit: cover; /* Prevents image stretching */
-    border: 2px solid #ddd; /* Adds a subtle border like in the Figma */
+    border-radius: 50%; 
+    background: #e0e0e0; 
+    object-fit: cover; 
+    border: 2px solid #ddd; 
     display: block;
 }
 
@@ -49,11 +47,10 @@
 
 .profile-text .role {
     font-size: 13px;
-    color: #8b0000; /* Maroon color for the role */
+    color: #8b0000; 
     font-weight: 600;
 }
 
-/* Settings Styling */
 .settings-content {
     margin-top: 10px;
 }

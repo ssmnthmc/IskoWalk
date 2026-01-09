@@ -47,19 +47,19 @@ body {
     }
 
     .menu a:visited {
-        color: white; /* prevent blue on visited/active */    
-        text-decoration: none; /* prevent underline on hover/click */    
+        color: white; 
+        text-decoration: none;  
     }    
 
     .menu a:hover{
-        color: white; /* prevent blue on visited/active */    
-        text-decoration: none; /* prevent underline on hover/click */
+        color: white;    
+        text-decoration: none; 
     }    
 
     .menu a.active {
-        color: white; /* prevent blue on visited/active */    
-        text-decoration: none; /* prevent underline on hover/click */
-        background: #5c0000; /* darker than sidebar */
+        color: white; 
+        text-decoration: none; 
+        background: #5c0000; 
     }
 
 .user-box {
