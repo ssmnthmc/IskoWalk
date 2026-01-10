@@ -77,6 +77,11 @@
         height: 40px;
         background: #d9d9d9;
         border-radius: 50%;
+        flex-shrink: 0;
+        aspect-ratio: 1 / 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 
 .card-info {
@@ -157,6 +162,11 @@
         height: 32px;
         background: #ddd;
         border-radius: 50%;
+        flex-shrink: 0;
+        aspect-ratio: 1 / 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 
 .companion-actions {
@@ -177,6 +187,56 @@
     z-index: 1000;
 }
 
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    margin-bottom: 20px;
+}
+
+.user-info-block.align {
+    display: flex;
+    align-items: center; /* Aligns circle with the top of the text label */
+    gap: 12px;
+}
+
+.user-text-column {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.user-name-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.user-text-column span {
+    font-size: 12px;
+    color: #888;
+}
+
+.avatar-circle {
+    width: 38px;
+    height: 38px;
+    background: #ddd;
+    border-radius: 50%;
+    flex-shrink: 0;
+    aspect-ratio: 1 / 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.user-row {
+    padding-bottom: 20px;
+}
+
+.modal-body .modal-row:last-child {
+    border-bottom: none;
+}
+
 .modal-content {
     background: white;
     width: 650px;
@@ -193,17 +253,33 @@
 .icon-circle {
     background: #f8eeee;
     color: #8b0000;
-    width: 36px;
-    height: 36px;
+    width: 38px; /* Specific size to match reference */
+    height: 38px;
+    min-width: 38px;
     border-radius: 50%;
-    display: grid;
-    place-items: center;
-    font-size: 15px;
-    line-height: 1;
+    display: flex; /* Flexbox is required for centering */
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    flex-shrink: 0; /* Prevents the circle from becoming an oval */
+    padding: 0; /* Small gap between the circle and the text content */
+    line-height: 0;
 }
+
+    .icon-circle i {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: auto;
+        height: auto;
+        margin: 0;
+        padding: 0;
+        line-height: 1;
+    }
 
 .modal-row {
     display: flex;
+    align-items: center;
     gap: 12px;
     margin-bottom: 18px;
     border-bottom: 1px solid #eee;
