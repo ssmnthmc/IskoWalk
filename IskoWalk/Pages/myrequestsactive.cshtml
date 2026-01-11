@@ -203,7 +203,6 @@
 
         <div id="cancelModal" class="modal-overlay">
             <div class="modal-content small-modal">
-                <button class="close-modal" onclick="closeModal('cancelModal')">&times;</button>
                 <h3 class="modal-title">Cancel Your Walk Request</h3>
                 <p class="modal-subtitle">Are you sure you want to cancel? Please provide a reason.</p>
 
@@ -212,7 +211,8 @@
                     <label class="radio-item"><input type="radio" name="reason"> No longer needed</label>
                     <label class="radio-item"><input type="radio" name="reason"> Found alternative companion</label>
                     <label class="radio-item"><input type="radio" name="reason"> Safety concern</label>
-                    <label class="radio-item"><input type="radio" name="reason"> Others</label>
+                    <label class="radio-item"><input type="radio" name="reason" id="otherreason"> Others</label>
+                    <textarea id="othertext" class="other-text" placeholder="Please specify..." style="display:none;"></textarea>
                 </div>
 
                 <div class="heads-up">
@@ -235,6 +235,12 @@
 <script>
     const btn = document.getElementById("profileBtn");
     const menu = document.getElementById("dropdownMenu");
+    const modal = document.getElementById('detailsModal');
+    const companionSection = document.getElementById('companionInfo');
+    const completeBtn = document.getElementById('markCompleteBtn');
+    const otherRadio = document.getElementById("otherreason");
+    const otherText = document.getElementById("othertext");
+    const allReasons = document.querySelectorAll("input[name='reason']");
 
     btn.onclick = () => menu.classList.toggle("show");
 
@@ -245,10 +251,6 @@
     });
 
     function openDetails(isAccepted) {
-        const modal = document.getElementById('detailsModal');
-        const companionSection = document.getElementById('companionInfo');
-        const completeBtn = document.getElementById('markCompleteBtn');
-
         if (isAccepted) {
             companionSection.classList.remove('hidden');
             completeBtn.classList.remove('hidden');
@@ -274,4 +276,14 @@
         closeModal('cancelModal');
         location.reload();
     }
+
+    allReasons.forEach(radio => {
+        radio.addEventListener("change", () => {
+            if (otherRadio.checked) {
+                otherText.style.display = "block";
+            } else {
+                otherText.style.display = "none";
+            }
+        });
+    });
 </script>

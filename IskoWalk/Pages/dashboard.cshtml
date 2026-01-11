@@ -109,22 +109,15 @@
                 </div>
 
                 <div class="modal-body">
-                    <div class="modal-row user-row">
-                        <div class="user-info-block">
+                    <div class="modal-row user-row grid-2">
+                        <div class="user-info-block align">
                             <i class="fa-solid fa-user-tag icon-circle"></i>
-                            <div class="avatar-circle"></div>
-                            <div>
-                                <strong>Juan Dela Cruz</strong>
+                            <div class="user-text-column">
                                 <span>Requester</span>
-                            </div>
-                        </div>
-                        <div id="companionInfo" class="user-info-block hidden">
-                            <i class="fa-solid fa-handshake icon-circle"></i>
-                            <div class="avatar-circle"></div>
-                            <div>
-                                <strong>Jose Rizal</strong>
-                                <span>Companion</span>
-                                <small><i class="fa-solid fa-phone"></i> 09999992737</small>
+                                <div class="user-name-row">
+                                    <div class="avatar-circle"></div>
+                                    <strong>Juan Dela Cruz</strong>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -170,35 +163,6 @@
                 </div>
             </div>
         </div>
-
-        <div id="cancelModal" class="modal-overlay">
-            <div class="modal-content small-modal">
-                <button class="close-modal" onclick="closeModal('cancelModal')">&times;</button>
-                <h3 class="modal-title">Cancel Your Walk Request</h3>
-                <p class="modal-subtitle">Are you sure you want to cancel? Please provide a reason.</p>
-
-                <div class="reason-list">
-                    <label class="radio-item"><input type="radio" name="reason" checked> Change of plans</label>
-                    <label class="radio-item"><input type="radio" name="reason"> No longer needed</label>
-                    <label class="radio-item"><input type="radio" name="reason"> Found alternative companion</label>
-                    <label class="radio-item"><input type="radio" name="reason"> Safety concern</label>
-                    <label class="radio-item"><input type="radio" name="reason"> Others</label>
-                </div>
-
-                <div class="heads-up">
-                    <i class="fa-solid fa-triangle-exclamation"></i>
-                    <div>
-                        <strong>Heads Up!</strong>
-                        <p>Cancelling will prevent you from creating or accepting new requests for 1 hour.</p>
-                    </div>
-                </div>
-
-                <div class="modal-footer">
-                    <button class="btn-secondary" onclick="closeModal('cancelModal')">Nevermind</button>
-                    <button class="btn-cancel" onclick="confirmCancellation()">Confirm Cancellation</button>
-                </div>
-            </div>
-        </div>
     </main>
 </div>
 
@@ -216,32 +180,18 @@
 
     function openDetails(isAccepted) {
         const modal = document.getElementById('detailsModal');
-        const companionSection = document.getElementById('companionInfo');
         const completeBtn = document.getElementById('markCompleteBtn');
 
         if (isAccepted) {
-            companionSection.classList.remove('hidden');
             completeBtn.classList.remove('hidden');
         } else {
-            companionSection.classList.add('hidden');
             completeBtn.classList.add('hidden');
         }
 
         modal.style.display = 'flex';
     }
 
-    function openCancelModal() {
-        document.getElementById('detailsModal').style.display = 'none';
-        document.getElementById('cancelModal').style.display = 'flex';
-    }
-
     function closeModal(modalId) {
         document.getElementById(modalId).style.display = 'none';
-    }
-
-    function confirmCancellation() {
-        alert("Request Cancelled. Note: You are now restricted for 1 hour.");
-        closeModal('cancelModal');
-        location.reload();
     }
 </script>

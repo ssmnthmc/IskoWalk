@@ -67,11 +67,8 @@ wwwroot\lib\jquery\dist\jquery.slim.js
 wwwroot\lib\jquery\dist\jquery.slim.min.js
 wwwroot\lib\jquery\dist\jquery.slim.min.map
 wwwroot\lib\jquery\LICENSE.txt
-C:\Users\admin\source\repos\IskoWalk\IskoWalk\wwwroot\css\create.css
 C:\Users\admin\source\repos\IskoWalk\IskoWalk\wwwroot\css\dashboard.css
-C:\Users\admin\source\repos\IskoWalk\IskoWalk\wwwroot\css\login.css
 C:\Users\admin\source\repos\IskoWalk\IskoWalk\wwwroot\css\myrequests.css
-C:\Users\admin\source\repos\IskoWalk\IskoWalk\wwwroot\css\profile.css
 C:\Users\admin\source\repos\IskoWalk\IskoWalk\wwwroot\css\site.css
 C:\Users\admin\source\repos\IskoWalk\IskoWalk\wwwroot\favicon.ico
 C:\Users\admin\source\repos\IskoWalk\IskoWalk\wwwroot\js\site.js
@@ -132,5 +129,8 @@ C:\Users\admin\source\repos\IskoWalk\IskoWalk\wwwroot\lib\jquery\dist\jquery.min
 C:\Users\admin\source\repos\IskoWalk\IskoWalk\wwwroot\lib\jquery\dist\jquery.min.map
 C:\Users\admin\source\repos\IskoWalk\IskoWalk\wwwroot\lib\jquery\dist\jquery.slim.js
 C:\Users\admin\source\repos\IskoWalk\IskoWalk\wwwroot\lib\jquery\dist\jquery.slim.min.js
-C:\Users\admin\source\repos\IskoWalk\IskoWalk\wwwroot\lib\jquery\dist\jquery.slim.min.map
+C:\Users\admin\source\repos\IskoWalk\IskoWalk\wwwroot\css\login.css
 C:\Users\admin\source\repos\IskoWalk\IskoWalk\wwwroot\lib\jquery\LICENSE.txt
+C:\Users\admin\source\repos\IskoWalk\IskoWalk\wwwroot\css\profile.css
+C:\Users\admin\source\repos\IskoWalk\IskoWalk\wwwroot\lib\jquery\dist\jquery.slim.min.map
+C:\Users\admin\source\repos\IskoWalk\IskoWalk\wwwroot\css\create.css

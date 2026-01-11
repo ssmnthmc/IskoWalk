@@ -396,3 +396,23 @@
         background: #fbe1e1;
         color: #b62323;
     }
+
+.reason-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.radio-item {
+    font-size: 13px;
+}
+
+.other-text {
+    margin-top: 8px;
+    padding: 8px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 13px;
+    resize: none;
+    height: 70px;
+}

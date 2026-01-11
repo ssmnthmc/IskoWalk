@@ -25,7 +25,6 @@ C:\Users\admin\source\repos\IskoWalk\IskoWalk\obj\Debug\net10.0\scopedcss\projec
 C:\Users\admin\source\repos\IskoWalk\IskoWalk\obj\Debug\net10.0\compressed\619uhxw9qv-{0}-0otqmrsne3-0otqmrsne3.gz
 C:\Users\admin\source\repos\IskoWalk\IskoWalk\obj\Debug\net10.0\compressed\r85rrhfdvn-{0}-xtsi6crgxa-xtsi6crgxa.gz
 C:\Users\admin\source\repos\IskoWalk\IskoWalk\obj\Debug\net10.0\compressed\1cb63lluxy-{0}-hp51cp9zpl-hp51cp9zpl.gz
-C:\Users\admin\source\repos\IskoWalk\IskoWalk\obj\Debug\net10.0\compressed\o2hn17qotm-{0}-w7g9krua6h-w7g9krua6h.gz
 C:\Users\admin\source\repos\IskoWalk\IskoWalk\obj\Debug\net10.0\compressed\tu1mkwleuw-{0}-gacdbk3pmo-gacdbk3pmo.gz
 C:\Users\admin\source\repos\IskoWalk\IskoWalk\obj\Debug\net10.0\compressed\d2jut592nb-{0}-b9sayid5wm-b9sayid5wm.gz
 C:\Users\admin\source\repos\IskoWalk\IskoWalk\obj\Debug\net10.0\compressed\s21tr684gh-{0}-61n19gt1b8-61n19gt1b8.gz
@@ -102,3 +101,4 @@ C:\Users\admin\source\repos\IskoWalk\IskoWalk\obj\Debug\net10.0\refint\IskoWalk.
 C:\Users\admin\source\repos\IskoWalk\IskoWalk\obj\Debug\net10.0\IskoWalk.pdb
 C:\Users\admin\source\repos\IskoWalk\IskoWalk\obj\Debug\net10.0\IskoWalk.genruntimeconfig.cache
 C:\Users\admin\source\repos\IskoWalk\IskoWalk\obj\Debug\net10.0\ref\IskoWalk.dll
+C:\Users\admin\source\repos\IskoWalk\IskoWalk\obj\Debug\net10.0\compressed\o2hn17qotm-{0}-x8dcu4dgui-x8dcu4dgui.gz
